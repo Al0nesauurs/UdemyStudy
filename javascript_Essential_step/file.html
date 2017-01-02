@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript</title>
+</head>
+<body>
+	<script type="text/javascript">
+
+		function myswitch(numhigh,numlow){
+			switch(numhigh){
+				case 10 :
+				document.write("high");
+				break;
+
+				case 0 :
+				document.write("low");
+				break;
+
+				default:
+				document.write("fail");
+			}
+		}
+
+		function check (numhigh,numlow){
+			if(numhigh<numlow)
+				document.write("false please swap");
+			else
+				document.write("true");
+			return ('<b> done check </b>');
+		}
+
+		function alertme(){
+			alert("alert here");
+			return null;
+		}
+
+		function confirmme(){
+			value =  confirm("this is a confirm box");
+			if (value == true)
+				document.write("Okay");
+			else
+				document.write("Cancel");
+			return null;
+		}
+		function regis(){
+			myName = prompt("Enter your name");
+			document.write("Your name is = "+myName);
+		}
+
+
+		document.write('<p style="color:red">Welcome to JavaScript learning series on<br> <b>Udemy.com</b></p>');
+
+		var numlow = 0;
+		var numhigh = 10;
+		var myArray = new Array("KID","IDIOT","D");
+		document.write(check(numlow,numhigh));
+		document.write('<br>');		
+		myswitch(numhigh,numlow);
+
+		document.write('<br>');
+		for (var i in myArray)
+		{
+			document.write(myArray[i]+" ");
+		}
+		document.write('<br>');
+
+	</script>
+
+	<p>
+		<button onclick="check(numhigh,numlow)">Click here to check</button>
+		<button onclick="alertme()"> Alert </button>
+		<button onclick="confirmme()"> confirm </button>
+		<button onclick="regis()"> register </button>
+	</p>	
+</body>
+</html>
